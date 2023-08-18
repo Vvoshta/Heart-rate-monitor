@@ -273,4 +273,43 @@
 
 .carousel {
   padding: 81px 0;
+}
+.carousel__inner {
+  position: relative;
+  width: 750px;
+  margin: 0 auto;
+}
+.carousel .slick-prev, .carousel .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -66px;
+  background-color: #fff;
+  border: none;
+}
+.carousel .slick-prev img, .carousel .slick-next img {
+  width: 31px;
+  height: 50px;
+}
+.carousel .slick-next {
+  right: -66px;
+  left: auto;
+}
+.carousel .slick-dots {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.carousel .slick-dots button {
+  font-size: 0;
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  outline: none;
+}
+.carousel .slick-dots li[class=slick-active] button {
+  background: #c70101;
 }/*# sourceMappingURL=style.css.map */
