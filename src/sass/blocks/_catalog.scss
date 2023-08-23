@@ -43,6 +43,8 @@
         flex-wrap: wrap;
         &_active {
             display: flex;
+            justify-content: center;
+            gap: 25px;
         }
     }
     &-item {

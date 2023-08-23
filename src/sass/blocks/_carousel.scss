@@ -6,6 +6,10 @@
         margin: 0 auto;
     }
 
+    .slick-slide img {
+        max-width: 100%;
+    }
+
     .slick-prev, .slick-next {
         position: absolute;
         top: 50%;
