@@ -2,8 +2,8 @@ $(document).ready(function(){
     $('.carousel__inner').slick({
         speed: 1200,
         // adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/arrow-left.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/arrow-right.svg"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrow-left.svg"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="icons/arrow-right.svg"></button>',
         responsive: [
             {
                 breakpoint: 992,
@@ -81,4 +81,23 @@ $(document).ready(function(){
     validateForms('#consultation form');
     validateForms('#order form');
     
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    // Smooth scrool and pageup
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 500) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href^=#up]").click(function() {
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+        return false;
+    });
+
+    new WOW().init();
 });
